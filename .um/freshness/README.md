@@ -43,7 +43,7 @@ Only supported keep decisions with stable snapshots become completed reviews.
 After accepting a correction, the corrected entry must be reviewed before it can
 join the baseline. Adding or moving other entries does not invalidate a review.
 
-Source snapshots watch repository identity, description, archive status, default
+Source snapshots cover inline companion links as well as the main entry. They watch repository identity, description, archive status, default
 branch, READMEs, Markdown under `docs/`, and package manifests throughout GitHub
 repositories. Crates.io entries also watch crate metadata and the linked GitHub
 repository. Other sites use their final URL and page hash. Fetching and comparing
@@ -54,6 +54,7 @@ Proposed corrections are checked against prior issues and PRs, then validated wi
 exact-entry patch checks and Lychee in a disposable checkout. New link failures are
 separated from existing failures; changed destinations must pass. Missing evidence,
 uncertainty, incomplete history, failed checks, or a changed catalog hold the edit.
+Edits that would drop companion links or separate nested content remain manual.
 Checks do not establish factual correctness: maintainers still review the evidence.
 
 History searches cover upstream and the fork, including discussion text and matched
